@@ -15,3 +15,13 @@ def home():
         else:
           return "User not recognised"
 
+app.route("/signup")
+def signup():
+    if request.method == "GET":
+        return render_template("signup.html")
+    else:
+        f = open("login.txt" , "w")
+        f.write(request.form["un"])
+        f.write("\n")
+        f.write(request.form[""])
+        f.write("")
